@@ -1,0 +1,6 @@
+TrimmomaticPE: Started with arguments:
+ -threads 2 -phred33 /home/karlbyl/private/Genome_Analysis/raw_data/RNA_raw_data/ERR2036632_1.fastq.gz /home/karlbyl/private/Genome_Analysis/raw_data/RNA_raw_data/ERR2036632_2.fastq.gz /home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036632_results/ERR2036632.left_paired.fastq.gz /home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036632_results/ERR2036632.left_unpaired.fastq.gz /home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036632_results/ERR2036632.right_paired.fastq.gz /home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036632_results/ERR2036632.right_unpaired.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:1:3 MINLEN:40 MAXINFO:40:0.5
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 27121727 Both Surviving: 16162108 (59.59%) Forward Only Surviving: 10673323 (39.35%) Reverse Only Surviving: 237 (0.00%) Dropped: 286059 (1.05%)
+TrimmomaticPE: Completed successfully

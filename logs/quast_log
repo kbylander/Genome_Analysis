@@ -1,0 +1,107 @@
+/sw/apps/bioinfo/quast/5.0.2/snowy/bin/quast.py -o /home/karlbyl/private/Genome_Analysis/trash/ --threads 1 -r /home/karlbyl/private/Genome_Analysis/raw_data/reference/OBMB01.fasta /home/karlbyl/private/Genome_Analysis/output/genome_assembly/canu_results/Assembly_F_ferriphilum_03-29.contigs.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.59.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2022-03-30 15:40:09
+
+Logging to /home/karlbyl/private/Genome_Analysis/trash/quast.log
+
+CWD: /domus/h1/karlbyl/private/Genome_Analysis/code
+Main parameters: 
+  MODE: default, threads: 1, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/karlbyl/private/Genome_Analysis/raw_data/reference/OBMB01.fasta ==> OBMB01
+
+Contigs:
+  Pre-processing...
+  /home/karlbyl/private/Genome_Analysis/output/genome_assembly/canu_results/Assembly_F_ferriphilum_03-29.contigs.fasta ==> Assembly_F_ferriphilum_03_29.contigs
+
+2022-03-30 15:40:10
+Running Basic statistics processor...
+  Reference genome:
+    OBMB01.fasta, length = 2610531, num fragments = 2, GC % = 54.14
+  Contig files: 
+    Assembly_F_ferriphilum_03_29.contigs
+  Calculating N50 and L50...
+    Assembly_F_ferriphilum_03_29.contigs, N50 = 2564648, L50 = 1, Total length = 2635249, GC % = 54.08, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/basic_stats/GC_content_plot.pdf
+  Drawing Assembly_F_ferriphilum_03_29.contigs GC content plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/basic_stats/Assembly_F_ferriphilum_03_29.contigs_GC_content_plot.pdf
+Done.
+
+2022-03-30 15:40:12
+Running Contig analyzer...
+  Assembly_F_ferriphilum_03_29.contigs
+  Logging to files /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/contigs_report_Assembly_F_ferriphilum_03_29-contigs.stdout and contigs_report_Assembly_F_ferriphilum_03_29-contigs.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2022-03-30 15:40:14
+Running NA-NGA calculation...
+  Assembly_F_ferriphilum_03_29.contigs, Largest alignment = 1465046, NA50 = 1465046, NGA50 = 1465046, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/karlbyl/private/Genome_Analysis/trash/aligned_stats/NGAx_plot.pdf
+Done.
+
+2022-03-30 15:40:15
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Assembly_F_ferriphilum_03_29.contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-03-30 15:40:16
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2022-03-30 15:40:18
+RESULTS:
+  Text versions of total report are saved to /home/karlbyl/private/Genome_Analysis/trash/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/karlbyl/private/Genome_Analysis/trash/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/karlbyl/private/Genome_Analysis/trash/report.html
+  PDF version (tables and plots) is saved to /home/karlbyl/private/Genome_Analysis/trash/report.pdf
+  Icarus (contig browser) is saved to /home/karlbyl/private/Genome_Analysis/trash/icarus.html
+  Log is saved to /home/karlbyl/private/Genome_Analysis/trash/quast.log
+
+Finished: 2022-03-30 15:40:18
+Elapsed time: 0:00:08.839070
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
