@@ -4,13 +4,22 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 15:00:00
-#SBATCH -J GA_trimmomatic
-# --mail-type = ALL
-# --mail-user karl.bylander.6061@student.uu.se
+#SBATCH -J GA_trimmomatic_1
+#SBATCH -o /home/karlbyl/private/Genome_Analysis/logs/trimmomatic_ERR2036631_log
+#SBATCH -e /home/karlbyl/private/Genome_Analysis/logs/trimmomatic_ERR2036631_log
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user karl.bylander.6061@student.uu.se
 
-mkdir ../output/trimmomatic
-module load bioinfo-tools
-module load trimmomatic
+module load bioinfo-tools trimmomatic
 
-trimmomatic PE -threads 2 -phred33 ./raw/ERR305399_1.fastq.gz ./raw/ERR305399_2.fastq.gz trimmomatic/ERR305399.left_paired.fastq.gz trimmomatic/ERR305399.left_unpaired.fastq.gz trimmomatic/ERR305399.right_paired.fastq.gz trimmomatic/ERR305399.right_unpaired.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+trimmomatic PE \
+-threads 2 -phred33 \
+/home/karlbyl/private/Genome_Analysis/raw_data/RNA_raw_data/ERR2036631_1.fastq.gz \
+/home/karlbyl/private/Genome_Analysis/raw_data/RNA_raw_data/ERR2036631_2.fastq.gz \
+/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036631_results/ERR2036631.left_paired.fastq.gz \
+/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036631_results/ERR2036631.left_unpaired.fastq.gz \
+/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036631_results/ERR2036631.right_paired.fastq.gz \
+/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/ERR2036631_results/ERR2036631.right_unpaired.fastq.gz \
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 \
+LEADING:3 TRAILING:3 SLIDINGWINDOW:1:3 MINLEN:40 MAXINFO:40:0.5 \
 
