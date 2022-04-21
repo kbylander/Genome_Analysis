@@ -15,13 +15,11 @@ module load bioinfo-tools bwa samtools
 
 REF_GENOME="/home/karlbyl/private/Genome_Analysis/output/genome_assembly/canu_results/Assembly_F_ferriphilum_03-29.contigs.fasta"
 LEFT_PAIRED="/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/*/*left_paired.fastq*"
-RIGHT_PAIRED="/home/karlbyl/private/Genome_Analysis/output/expression_analysis/trimmomatic_results/*/*right_paired.fastq*"
-
 bwa index ${REF_GENOME}
 
 for i in $LEFT_PAIRED
 do
-	READ_LEFT=${i/.left_paired.fastq.gz/.right_paired.fastq.gz}
+	READ_RIGHT=${i/.left_paired.fastq.gz/.right_paired.fastq.gz}
 	NAME=$(basename $i .left_paired.fastq.gz)
-	bwa mem -t 8 ${REF_GENOME} ${i} ${READ_LEFT} | samtools sort -@8 -o /home/karlbyl/private/Genome_Analysis/output/expression_analysis/${NAME}.bam -
+	bwa mem -t 8 ${REF_GENOME} ${i} ${READ_RIGHT} | samtools sort -@8 -o /home/karlbyl/private/Genome_Analysis/output/expression_analysis/${NAME}.bam -
 done
