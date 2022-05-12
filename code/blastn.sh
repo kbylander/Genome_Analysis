@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH -A uppmax2022-2-5
-#SBATCH --reservation=uppmax2022-2-5_4
+#SBATCH --reservation=uppmax2022-2-5_10
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 8
@@ -17,4 +17,4 @@ GENOME="/home/karlbyl/private/Genome_Analysis/output/genome_assembly/canu_result
 OUTDIR="/home/karlbyl/private/Genome_Analysis/output/genome_assembly/blastn_results"
 REF="/home/karlbyl/private/Genome_Analysis/raw_data/reference/OBMB01.fasta"
 
-blastn -query ${GENOME} -subject ${REF} -out ${OUTDIR}/blastn.out
+blastn -query ${GENOME} -subject ${REF} -out ${OUTDIR}/blastn.out -outfmt 6
