@@ -4,7 +4,8 @@ Genome_Analysis/code/
 This directory contains scripts that are run for the analysis. 
 
 Contains:
-canu_assembly.sh - Perfomrs a Genome assembly.
+
+canu_assembly.sh - Performs a Genome assembly.
 
 quast.sh - Evaluates generated assembly.
 
