@@ -12,6 +12,9 @@
 
 module load bioinfo-tools samtools
 
-BAM_FILE="/home/karlbyl/private/Genome_Analysis/output/expression_analysis/bwa_results/*.bam"
+cd /home/karlbyl/private/Genome_Analysis/output/expression_analysis/bwa_results/
 
-parallel  samtools index ::: $BAM_FILE
+for i in .bam
+do
+samtools index $i
+done
